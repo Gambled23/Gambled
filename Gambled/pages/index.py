@@ -1,7 +1,7 @@
 import reflex as rx
 from Gambled.components.sidebar import sidebar
 from Gambled.components.project_card import project_card
-from Gambled.variables import *
+from Gambled.variables import age, projects
 
 @rx.page(title="Home")
 def index() -> rx.Component:

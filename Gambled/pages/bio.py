@@ -1,6 +1,6 @@
 import reflex as rx
 from Gambled.components.sidebar import sidebar
-from Gambled.variables import *
+from Gambled.variables import age
 
 @rx.page(title="Bio")
 def bio():
