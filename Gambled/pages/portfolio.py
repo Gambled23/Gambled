@@ -13,6 +13,7 @@ def subtitle(
         color=rx.color("mint", 12),
         align="left",
         padding_top="1em",
+        padding_x="0.5em",
     ),
 
 @rx.page(title="Portfolio")
@@ -60,6 +61,7 @@ def portfolio():
                 size="6",
                 color=rx.color("mint", 12),
                 align="left",
+                padding_x="0.5em",
             ),
             rx.grid(
                 project_card(project=projects["eliasbot"]),
