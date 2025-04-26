@@ -9,6 +9,7 @@ projects = {
         "link":"https://asanawave.com/",
         "repo":"",
         "body_image":"/asanawave/1.png",
+        "technologies":["django", "htmx & hyperscript", "mariadb", "docker", "nginx", "oracle cloud", "machine learning", "webhosting", "selfhost"],
     },
 
     "nix-dotfiles": {
@@ -19,6 +20,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/nix-dotfiles",
         "body_image":"",
+        "technologies":["nix", "nixos", "home-manager", "bash"],
     },
 
     "dixios": {
@@ -29,6 +31,7 @@ projects = {
         "link":"https://dixios.com/",
         "repo":"",
         "body_image":"/dixios/1.png",
+        "technologies":["html", "css", "bootstrap", "webhosting",],
     },
 
     "Nisha": {
@@ -39,6 +42,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/TheNishaProject",
         "body_image":"",
+        "technologies":["laravel", "livewire", "php", "html", "css", "tailwind", "mariadb", "docker", "nginx", "webhosting", "selfhost"],
     },
 
     "eliasbot": {
@@ -49,6 +53,7 @@ projects = {
         "link":"",
         "repo":"",
         "body_image":"",
+        "technologies":["python", "hikari", "selfhost"],
     },    
     
     "caphpibot": {
@@ -59,6 +64,7 @@ projects = {
         "link":"",
         "repo":"",
         "body_image":"",
+        "technologies":["laravel", "laracord", "php"],
     },
 
     "TheParkingZone": {
@@ -69,6 +75,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/The-Parking-Zone",
         "body_image":"",
+        "technologies":["python", "tkinter", "opencv", "postgresql"],
     },
 
     "OnlineWeddingInvitation": {
@@ -79,5 +86,17 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/undangan",
         "body_image":"",
+        "technologies":["html", "css", "js", "webhosting"],
+    },
+
+    "Gambled23": {
+        "avatar":"/logo.png",
+        "title":"Personal website",
+        "description_short":"You're looking at it!",
+        "description_long":"My personal webpage, I made this using pure python thanks to Reflex\nThis started like an experiment of me trying to recreate my (now old) personal landingpage buit with just html and css, but without actually writing any html or css.\nThis project helped me learn a lot about reflex, and how you can use it to create a fullstack webapp at a really good speed.\n\nAnd now as I write this the card reloads and words appear on the screen, some wizardy happens here.\n",
+        "link":"",
+        "repo":"https://github.com/Gambled23/Gambled",
+        "body_image":"",
+        "technologies":["python", "reflex", "css", "webhosting"],
     },
 }

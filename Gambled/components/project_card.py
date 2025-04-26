@@ -1,10 +1,23 @@
 import reflex as rx
+from reflex.components.radix.themes.base import (
+    LiteralAccentColor,
+)
 from typing import Optional, Dict, Any
+import random
+
+class IterState(rx.State):
+    color: list[str] = [
+        "red",
+        "green",
+        "blue",
+    ]
+
+def colored_box(color: str):
+    return rx.button(color, background_color=color)
 
 def project_card(
         project: Optional[Dict[str, Any]] = None,
         size: str = "3",
-
 ) -> rx.Component:
     return rx.dialog.root(
     rx.dialog.trigger(
@@ -33,6 +46,7 @@ def project_card(
             white_space="pre-wrap",
             font_size="1.1em",
             text_align="justify",
+            padding_bottom="0.5em",
         ),
         rx.cond(
             project["body_image"],
@@ -41,9 +55,15 @@ def project_card(
                 width="100%",
                 height="auto",
                 border_radius="20px",
-                padding="0.5em",
+                padding_bottom="0.5em",
                 margin_x="auto",
             ),
+        ), 
+        rx.hstack(
+            rx.foreach(project["technologies"], status_chip),
+            wrap="wrap",
+            spacing="2",
+            padding_bottom="2em",
         ),
         rx.hstack(
             rx.cond(
@@ -88,3 +108,21 @@ def project_card(
         ),
     ),
 )
+
+
+status_chip_props = {
+    "radius": "full",
+    "variant": "outline",
+    "size": "3",
+}
+
+
+color_schemes = ["indigo", "cyan", "orange", "crimson", "tomato", "red", "grass", "gray"]
+def status_chip(
+    name: str,
+) -> rx.Component:
+    return rx.badge(
+        name,
+        color_scheme=random.choice(color_schemes),
+        **status_chip_props,
+    )
