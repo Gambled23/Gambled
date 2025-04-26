@@ -152,11 +152,12 @@ def project_card(
     ),
     rx.dialog.content(
         rx.dialog.title(title),
-        rx.dialog.description(description_long, 
-                              white_space="pre-wrap",
-                              font_size="1.1em",
-                              text_align="justify",
-                            ),
+        rx.dialog.description(
+            description_long, 
+            white_space="pre-wrap",
+            font_size="1.1em",
+            text_align="justify",
+        ),
         rx.hstack(
             rx.cond(
                 link,
