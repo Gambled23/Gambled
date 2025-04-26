@@ -10,6 +10,12 @@ class State(rx.State):
     age: int = 21
     ...
 
+style = {
+    "background": "#0E1511",
+    "height": "100vh",
+    "width": "100vw",
+    "margin": "0px",
+}
 
 
 def sidebar_item(
@@ -114,17 +120,96 @@ def sidebar() -> rx.Component:
         ),
     )
 
+
+def project_card(
+          avatar: str,
+          title: str,
+          description_short: str,
+          description_long: str,
+          link: str = None,
+          repo: str = None,
+
+) -> rx.Component:
+    return rx.dialog.root(
+    rx.dialog.trigger(
+        rx.card(
+            rx.link(
+            rx.flex(
+                rx.avatar(src=avatar),
+                rx.box(
+                    rx.heading(title),
+                    rx.text(description_short,),
+                ),
+                height="100%",
+                align="center",
+                spacing="4",
+            ),
+            height="100%",
+            size="3",
+            as_child=True,
+            ),
+        ),
+    ),
+    rx.dialog.content(
+        rx.dialog.title(title),
+        rx.dialog.description(description_long, 
+                              white_space="pre-wrap",
+                              font_size="1.1em",
+                              text_align="justify",
+                            ),
+        rx.hstack(
+            rx.cond(
+                link,
+                rx.link(
+                    rx.button(
+                        rx.icon("square-arrow-out-up-right"),
+                        "Link",
+                    ),
+                    href=link,
+                    is_external=True,
+                    color_scheme="green",
+                    variant="solid",
+                ),
+            ),
+            rx.cond(
+                repo,
+                rx.link(
+                    rx.button(
+                        rx.icon("github"),
+                        "Repository",
+                    ),
+                    color="white",
+                    color_scheme="blue",
+                    variant="solid",
+                    href=repo,
+                    is_external=True,
+                ),
+            ),
+            rx.dialog.close(
+                rx.button(
+                    "Close",
+                    color_scheme="gray",
+                    variant="soft",
+                ),    
+            ),
+            width="100%",
+            height="100%",
+            spacing="4",
+            justify="end",
+            align="center",
+        ),
+    ),
+)
+
 def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.flex(
-        rx.color_mode.button(position="top-right"),
+        # rx.color_mode.button(position="top-right"),
         sidebar(),
         rx.vstack(
             rx.heading("Home", 
                         as_="h1", 
                         size="9",
-                        width="100%",
-                        align="center",
                     ),
             rx.grid(
                 rx.container(
@@ -138,7 +223,7 @@ def index() -> rx.Component:
                     rx.flex(
                         rx.link(
                             rx.image(
-                                src="/github_logo.png",
+                                src="/logos/github.png",
                                 margin_x="auto",
                                 height="100%",
                             ),
@@ -148,7 +233,7 @@ def index() -> rx.Component:
                         ),
                         rx.link(
                             rx.image(
-                                src="/linkedin-logo.webp",
+                                src="/logos/linkedin.webp",
                                 height="100%",
                                 margin_x="auto",
                             ),
@@ -158,7 +243,7 @@ def index() -> rx.Component:
                         ),
                         rx.link(
                             rx.image(
-                                src="/mail_logo.png",
+                                src="/logos/gmail.png",
                                 height="100%",
                                 margin_x="auto",
                             ),
@@ -192,24 +277,55 @@ def index() -> rx.Component:
                 width="100%",
                 padding="2em",
             ),
-            align="center",
-            width="100%",
-            padding_top="4em",
-            padding_right="2em",
+            rx.heading("Currently working on", 
+                as_="h1", 
+                size="9",
+                align="center",
+                padding_top="2em",
+                color=rx.color("brown", 12),
+            ),
+            rx.grid(
+                project_card(
+                    avatar="/asanawave/logo.svg",
+                    title="Asanawave",
+                    description_short="Webapp django app for a yoga teacher",
+                    description_long="Currently I’m working with a three people team to develop and deploy a webapp for a private client, using Django as backend and HTMX to replace Javascript in the frontend.\nWe provide a space for a private teachers to upload lessons and manage all of their learning materials, while keeping close communication with their students.\nMy main responsibilities as a developer are integrating newly developed components to the system, write tests for existing components, and managing nginx server for provide a seamless integration on cloud.",
+                    link="https://asanawave.com/",
+                ),
+                project_card(
+                    avatar="/logos/nix.png",
+                    title="Nix dotfiles",
+                    description_short="My nix configuration for all my devices",
+                    description_long="All of my devices run NixOS, so I decided to create a repository with all of my dotfiles and configuration files.\nI use this repository to keep track of all the changes I make to my system, and to share my configuration with others.\nFeel free to snoop around.",
+                    repo="https://github.com/Gambled23/nix-dotfiles",
+                ),
+                project_card(
+                    avatar="/logos/ia.svg",
+                    title="Dixios",
+                    description_short="AI and LLM Consultant at Dixios",
+                    description_long="I'm currently working as a consultant for Dixios, a company that gives training to office employees on how to use AI tools to improve their productivity.\nMy main responsibilities are to create training materials, and to give training sessions to employees.\nI also help the company to integrate AI tools into their workflow, and to create custom solutions for their clients.",
+                    link="https://dixios.com/",
+                ),
+                columns=rx.breakpoints(sm="1", md="3",),
+                spacing="4",
+                padding="2em",
+            ),
+        align="center",
+        width="100%",
+        padding_top="4em",
+        padding_right="2em",
         ),
     )
 
 @rx.page(title="Bio")
 def bio():
     return rx.flex(
-        rx.color_mode.button(position="top-right"),
+        # rx.color_mode.button(position="top-right"),
         sidebar(),
         rx.vstack(
             rx.heading("Bio", 
                         as_="h1", 
                         size="9",
-                        width="100%",
-                        align="center",
                     ),
             rx.container(
                 rx.text(
@@ -285,19 +401,30 @@ def bio():
 
 @rx.page(title="Portfolio")
 def portfolio():
-    return rx.text("Portfolio")
+        return rx.flex(
+        # rx.color_mode.button(position="top-right"),
+        sidebar(),
+        rx.vstack(
+            rx.heading("Portfolio", 
+                        as_="h1", 
+                        size="9",
+                    ),
+            align="center",
+            width="100%",
+            padding_top="4em",
+            padding_right="2em",
+        ),
+    ),
 
 @rx.page(title="Links")
 def links():
         return rx.flex(
-        rx.color_mode.button(position="top-right"),
+        # rx.color_mode.button(position="top-right"),
         sidebar(),
         rx.vstack(
             rx.heading("Bio", 
                         as_="h1", 
                         size="9",
-                        width="100%",
-                        align="center",
                     ),
             rx.container(
                 rx.heading(
@@ -381,5 +508,8 @@ def links():
         ),
     )
 
-app = rx.App()
+app = rx.App(
+    theme=rx.theme(accent_color="grass"),
+    style=style,
+)
 app.add_page(index)
