@@ -11,7 +11,7 @@
    class="lucide lucide-sparkles-icon lucide-sparkles"
    version="1.1"
    id="svg5"
-   sodipodi:docname="ia.svg"
+   sodipodi:docname="logo.svg"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    inkscape:export-filename="ia.svg"
    inkscape:export-xdpi="96"
@@ -31,11 +31,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="48.333333"
-     inkscape:cx="12.010345"
-     inkscape:cy="19.448276"
-     inkscape:window-width="1771"
-     inkscape:window-height="776"
+     inkscape:zoom="34.176828"
+     inkscape:cx="10.357895"
+     inkscape:cy="13.196076"
+     inkscape:window-width="1714"
+     inkscape:window-height="1406"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -57,17 +57,17 @@
   <path
      d="M 20,3 V 7"
      id="path2"
-     style="stroke:#ffffff" />
+     style="stroke:#d5f6ff" />
   <path
      d="M 22,5 H 18"
      id="path3"
-     style="stroke:#ffffff" />
+     style="fill:#d7eef4;stroke:#d5f6ff" />
   <path
      d="m 4,17 v 2"
      id="path4"
-     style="stroke:#ffffff" />
+     style="stroke:#f6ffd5" />
   <path
      d="M 5,18 H 3"
      id="path5"
-     style="stroke:#ffffff" />
+     style="stroke:#f6ffd5" />
 </svg>
