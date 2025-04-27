@@ -69,6 +69,8 @@ def sidebar() -> rx.Component:
                 height="100vh",
                 width="16em",
             ),
+            bg=rx.color("accent", 3),
+            height="100%",
         ),
         rx.mobile_and_tablet(
             rx.drawer.root(
