@@ -9,6 +9,7 @@ projects = {
         "link":"https://asanawave.com/",
         "repo":"",
         "body_image":"/asanawave/1.png",
+        "thumbnail":"/asanawave/9.png",
         "technologies":["django", "htmx & hyperscript", "mariadb", "docker", "nginx", "oracle cloud", "machine learning", "webhosting", "selfhost"],
     },
 
@@ -20,6 +21,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/nix-dotfiles",
         "body_image":"",
+        "thumbnail":"",
         "technologies":["nix", "nixos", "home-manager", "bash"],
     },
 
@@ -30,7 +32,8 @@ projects = {
         "description_long":"I'm currently working as a consultant for Dixios, a company that gives training to office employees on how to use AI tools to improve their productivity.\nMy main responsibilities are to create training materials, and to give training sessions to employees.\nI also help the company to integrate AI tools into their workflow, and to create custom solutions for their clients.\n\nFun fact: I worked as a fullstack dev for the webpage too.",
         "link":"https://dixios.com/",
         "repo":"",
-        "body_image":"/dixios/1.png",
+        "body_image":"/dixios/3.png",
+        "thumbnail":"/dixios/1.png",
         "technologies":["html", "css", "bootstrap", "webhosting",],
     },
 
@@ -42,6 +45,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/TheNishaProject",
         "body_image":"",
+        "thumbnail":"",
         "technologies":["laravel", "livewire", "php", "html", "css", "tailwind", "mariadb", "docker", "nginx", "webhosting", "selfhost"],
     },
 
@@ -53,6 +57,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/Eliasbot",
         "body_image":"/eliasbot/1.png",
+        "thumbnail":"/eliasbot/2.png",
         "technologies":["python", "hikari", "selfhost"],
     },    
     
@@ -64,6 +69,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/caphpibot",
         "body_image":"/caphpibot/1.png",
+        "thumbnail":"",
         "technologies":["laravel", "laracord", "php"],
     },
 
@@ -74,7 +80,8 @@ projects = {
         "description_long":"A system for parking-spaces administration, auto-assigning the nearest available space, and printing a QR code with the assigned space.\nMade entirely using python, this project uses tkinter to give the admin an easy to use GUI\nAs an administrator, you can watch live status of the parking lot, receive notifications from cars parked for more than 48 hours, create and delete parking spaces, and everything you would expect from a parking lot administration software.\nThe software runs entirely on the local PC using a self-hosted postgres database, but thanks to the GUI the administrator user doesn't need to know anything about databases to fully use The parking zone.",
         "link":"",
         "repo":"https://github.com/Gambled23/The-Parking-Zone",
-        "body_image":"/theparkingzone/1.png",
+        "body_image":"/theparkingzone/3.png",
+        "thumbnail":"/theparkingzone/1.png",
         "technologies":["python", "tkinter", "opencv", "postgresql"],
     },
 
@@ -86,6 +93,7 @@ projects = {
         "link":"",
         "repo":"https://github.com/Gambled23/undangan",
         "body_image":"/wedding/1.png",
+        "thumbnail":"/wedding/2.png",
         "technologies":["html", "css", "js", "bootstrap", "webhosting"],
     },
 
@@ -97,6 +105,7 @@ projects = {
         "link":"https://gambled23.github.io/",
         "repo":"https://github.com/Gambled23/Gambled",
         "body_image":"",
+        "thumbnail":"",
         "technologies":["python", "reflex", "css", "webhosting"],
     },
 }

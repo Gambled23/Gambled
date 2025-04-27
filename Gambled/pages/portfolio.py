@@ -72,5 +72,6 @@ def portfolio():
                 width="100%",
             ),
         width="100%",
+        padding_right="2em",
         ),
     ),

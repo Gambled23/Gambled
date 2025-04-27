@@ -22,22 +22,27 @@ def project_card(
     return rx.dialog.root(
     rx.dialog.trigger(
         rx.card(
-            rx.link(
-            rx.flex(
-                rx.avatar(src=project["avatar"]),
-                rx.box(
-                    rx.heading(project["title"],),
-                    rx.text(project["description_short"],),
+            rx.hover_card.root(
+            rx.hover_card.trigger(
+                rx.link(
+                    rx.flex(
+                        rx.avatar(src=project["avatar"]),
+                        rx.box(
+                            rx.heading(project["title"],),
+                            rx.text(project["description_short"],),
+                        ),
+                        height="100%",
+                        align="center",
+                        spacing="4",
+                    ),
+                    height="100%",
+                    size=size,
+                    as_child=True,
                 ),
-                height="100%",
-                align="center",
-                spacing="4",
             ),
-            height="100%",
-            size=size,
-            as_child=True,
-            ),
+            hover_card(project),
         ),
+    ),
     ),
     rx.dialog.content(
         rx.dialog.title(project["title"]),
@@ -126,3 +131,27 @@ def status_chip(
         color_scheme=random.choice(color_schemes),
         **status_chip_props,
     )
+
+def hover_card(
+        project: Optional[Dict[str, Any]] = None,
+    ) -> rx.Component:
+    return rx.hover_card.content(
+            rx.flex(
+                rx.cond(
+                    project["thumbnail"],                
+                    rx.image(
+                        src=project["thumbnail"],
+                        width="100%",
+                        height="auto",
+                        border_radius="10px",
+                    ),
+                ), 
+
+                rx.hstack(
+                    rx.foreach(project["technologies"], status_chip),
+                    spacing="2",
+                    justify="center",
+                    wrap="wrap",
+                ),
+            ),
+        ),

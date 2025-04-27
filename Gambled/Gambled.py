@@ -20,6 +20,10 @@ class State(rx.State):
 # }
 
 app = rx.App(
-    theme=rx.theme(accent_color="grass"),
+    theme=rx.theme(
+        has_background=True,
+        radius="large",
+        accent_color="grass",
+        ),
     # style=style,
 )
