@@ -43,10 +43,17 @@ def sidebar() -> rx.Component:
         rx.desktop_only(
             rx.vstack(
                 rx.hstack(
-                    rx.image(
-                        src="/logo.png",
-                        width="100%",
-                        height="auto",
+                    rx.color_mode_cond(
+                        light= rx.image(
+                            src="/logo_black.png",
+                            width="100%",
+                            height="auto",
+                        ),
+                        dark=rx.image(
+                            src="/logo_white.png",
+                            width="100%",
+                            height="auto",
+                        ),
                     ),
                     align="center",
                     justify="start",

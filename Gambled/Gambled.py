@@ -12,14 +12,14 @@ class State(rx.State):
     ...
 
 
-style = {
-    "background": "#0E1511",
-    "height": "100vh",
-    "width": "100vw",
-    "margin": "0px",
-}
+# style = {
+#     "background": "#0E1511",
+#     "height": "100vh",
+#     "width": "100vw",
+#     "margin": "0px",
+# }
 
 app = rx.App(
     theme=rx.theme(accent_color="grass"),
-    style=style,
+    # style=style,
 )
