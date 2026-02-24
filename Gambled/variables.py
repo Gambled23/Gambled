@@ -108,4 +108,16 @@ projects = {
         "thumbnail":"",
         "technologies":["python", "reflex", "css", "webhosting"],
     },
+
+    "gdlnarcobloqueos": {
+        "avatar":"/gdlnarcobloqueos/logo.ico",
+        "title":"GDL Narco Bloqueos",
+        "description_short":"Webpage to track narco-related incidents and visualize them on a map",
+        "description_long":"On the morning of 22.02.2026 we had a very violent day in Guadalajara, Jalisco, Mexico, with more than 20 narco related incidents all around the city, including shootings, fires, narco blockades, and another attacks of terrorism \nIn less than two hours I developed and deployed in AWS a webpage that tracked all of these incidents in real time and visualized them on a map.\nThe webpage implemented an anonymus form to report new incidents across the city, and with the help of a few friends, we manually double-checked each incident, trying to determine if the information was accurate and if it should go into the map.\nIn less than 12 hours we had more than 60 incidents tracked, tagged and visualized on the map.",
+        "link":"http://gdlnarcobloqueos.com/",
+        "repo":"https://github.com/Gambled23/manhattan",
+        "body_image":"/gdlnarcobloqueos/1.png",
+        "thumbnail":"/gdlnarcobloqueos/1.png",
+        "technologies":["HTML", "CSS", "Django", "Django Forms", "webhosting", "AWS"],
+    },
 }
