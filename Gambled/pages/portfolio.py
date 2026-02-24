@@ -34,6 +34,7 @@ def portfolio():
             ),
             subtitle("Web developer"),
             rx.grid(
+                project_card(project=projects["gdlnarcobloqueos"]),
                 project_card(project=projects["asanawave"]),
                 project_card(project=projects["nisha"]),
                 project_card(project=projects["dixios"]),
