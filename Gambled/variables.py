@@ -120,4 +120,16 @@ projects = {
         "thumbnail":"/gdlnarcobloqueos/1.png",
         "technologies":["HTML", "CSS", "Django", "Django Forms", "webhosting", "AWS"],
     },
+
+    "Remy": {
+        "avatar":"/remy/logo.png",
+        "title":"Remy the Robot",
+        "description_short":"Tiny arduino project that makes my lobotomized remy plushie move it's tiny servomotor arms :3",
+        "description_long":"Arduino based project to move two servo motors inside a rat shaped plushie, it includes multiple movesets, an arduino nano, and a lot of sewing.\n\n no animals were harmed in the making of this code (just stuffed animals)",
+        "link":"",
+        "repo":"https://github.com/Gambled23/Remy-Project",
+        "body_image":"/remy/1.jpg",
+        "thumbnail":"/remy/2.jpg",
+        "technologies":["arduino", "c++", "electronics", "robotics", "sewing"],
+    },
 }

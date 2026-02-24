@@ -48,6 +48,7 @@ def portfolio():
 
             subtitle("Personal projects"),
             rx.grid(
+                project_card(project=projects["Remy"]),
                 project_card(project=projects["TheParkingZone"]),
                 project_card(project=projects["nix-dotfiles"]),
                 columns=rx.breakpoints(sm="1", md="3",),
